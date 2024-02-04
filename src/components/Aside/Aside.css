@@ -1,0 +1,49 @@
+.aside {
+  grid-column: 1 / 3;
+  background-color: #02356b;
+  border-radius: calc(8px + 0.5rem);
+
+  padding: 24px 16px;
+  nav {
+    display: flex;
+    row-gap: 16px;
+    flex-direction: column;
+    color: #999999;
+    position: sticky;
+    top: 20px;
+  }
+  @media (width < 560px) {
+    padding: 8px;
+    > div {
+      display: none;
+    }
+  }
+  @media (width <= 320px) {
+    grid-column: 0/2;
+  }
+
+  .category {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: rgb(53 69 154);
+    }
+
+    &.active {
+      background-color: rgb(59, 78, 172);
+    }
+
+    @media (width < 1060px) {
+      justify-content: center;
+      p {
+        display: none;
+      }
+    }
+  }
+}
